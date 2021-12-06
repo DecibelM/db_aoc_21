@@ -3,6 +3,7 @@ from Day2 import Day2
 from Day3 import Day3
 from Day4 import Day4
 from Day5 import Day5
+from Day6 import Day6
 """
 print("Day 1:")
 Day1.task_1()
@@ -17,6 +18,10 @@ Day3.task1()
 print("Day4: ")
 Day4.task2()
 
-"""
 print("Day5: ")
 Day5.task1()
+"""
+print("Day6: ")
+Day6.task1()
+
+

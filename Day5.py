@@ -1,10 +1,10 @@
 from collections import Counter
-import re
 from input import Imports
 
 importClass = Imports()
 
 class Day5:
+
 
     @staticmethod
     def task1():
