@@ -4,6 +4,8 @@ from Day3 import Day3
 from Day4 import Day4
 from Day5 import Day5
 from Day6 import Day6
+from Day7 import Day7
+from Day8 import Day8
 """
 print("Day 1:")
 Day1.task_1()
@@ -20,8 +22,16 @@ Day4.task2()
 
 print("Day5: ")
 Day5.task1()
-"""
+
 print("Day6: ")
 Day6.task1()
+
+print("Day7: ")
+#Day7.task1()
+Day7.task2()
+
+#print(Day7.geom_sum(5, 16))
+"""
+Day8.task2()
 
 
