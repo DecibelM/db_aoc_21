@@ -4,7 +4,6 @@ importClass = Imports()
 
 
 class Point:
-
     def __init__(self, i, j, value):
         self.i = i
         self.j = j
@@ -12,7 +11,6 @@ class Point:
 
 
 class Day9:
-
     @staticmethod
     def input():
         # inp = importClass.getInput("input/input9_test.txt")
@@ -47,7 +45,7 @@ class Day9:
         for k in i_range:
             for n in j_range:
                 neighbor = int(inp[i + k][j + n])
-                neighbor_is_smaller = (neighbor <= item)
+                neighbor_is_smaller = neighbor <= item
                 if neighbor_is_smaller and (k != 0 or n != 0):
                     return False
         return True
@@ -83,7 +81,11 @@ class Day9:
             for k in i_range:
                 for n in j_range:
                     if (k != 0 or n != 0) and (abs(k) != 1 or abs(n) != 1):
-                        neighbors.append(Point(node.i + k, node.j + n, int(inp[node.i + k][node.j + n])))
+                        neighbors.append(
+                            Point(
+                                node.i + k, node.j + n, int(inp[node.i + k][node.j + n])
+                            )
+                        )
             return neighbors
 
         def dfs(visited, graph, node):

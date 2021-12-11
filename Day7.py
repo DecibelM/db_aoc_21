@@ -6,10 +6,9 @@ importClass = Imports()
 
 
 class Day7:
-
     @staticmethod
     def task1():
-        #inp = importClass.getInput_split_by_comma("input/input7_test.txt")
+        # inp = importClass.getInput_split_by_comma("input/input7_test.txt")
         inp = importClass.getInput_split_by_comma("input/input7.txt")
 
         counter = Counter(inp)
@@ -47,7 +46,7 @@ class Day7:
         lowest_fuel = 10000000000000
         lowest_key = 0
 
-        for i in range(start, stop+1):
+        for i in range(start, stop + 1):
             fuel = 0
             for fish in inp:
                 n = abs(fish - i)
@@ -59,8 +58,3 @@ class Day7:
 
         print(f"Baseline: {lowest_key}, lowest fuel: {lowest_fuel}")
         print(f"Time: {time.time() - start_time}")
-
-
-
-
-

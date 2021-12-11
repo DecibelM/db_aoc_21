@@ -2,8 +2,8 @@ from input import Imports
 
 importClass = Imports()
 
-class Day3:
 
+class Day3:
     @staticmethod
     def task1():
         data = importClass.getInput("input/input3.txt")
@@ -15,35 +15,39 @@ class Day3:
         result = Day3.bin2int(bin_list)
         print("Result1: " + str(result))
 
-        #Task 2
+        # Task 2
         data2 = data.copy()
         data3 = data.copy()
-        for i in range(0,len(bin_list)):
+        for i in range(0, len(bin_list)):
             no_ones = Day3.count_ones(data2, i)
             most_common = 0
             if no_ones >= len(data2) / 2:
                 most_common = 1
 
-            #find oxygen rate
-            filtered_iterator = filter(lambda item: str(item)[i] == str(most_common), data2)
+            # find oxygen rate
+            filtered_iterator = filter(
+                lambda item: str(item)[i] == str(most_common), data2
+            )
             data2 = list(filtered_iterator)
             if len(data2) == 1:
                 break
 
         for i in range(0, len(bin_list)):
-            #find CO2 scrubber rate
+            # find CO2 scrubber rate
             least_common = 0
             no_ones = Day3.count_ones(data3, i)
             if no_ones < len(data3) / 2:
                 least_common = 1
-            filtered_iterator = filter(lambda item: str(item)[i] == str(least_common), data3)
+            filtered_iterator = filter(
+                lambda item: str(item)[i] == str(least_common), data3
+            )
             data3 = list(filtered_iterator)
             if len(data3) == 1:
                 break
 
         O2 = int(data2[0], 2)
         CO2 = int(data3[0], 2)
-        print("Task2: " + str(O2*CO2))
+        print("Task2: " + str(O2 * CO2))
 
     @staticmethod
     def to_most_common(list, length):
@@ -70,5 +74,5 @@ class Day3:
         for item in list:
             length -= 1
             sum += item * 2 ** (length)
-            sum2 += abs(item-1) * 2 ** (length)
+            sum2 += abs(item - 1) * 2 ** (length)
         return sum * sum2

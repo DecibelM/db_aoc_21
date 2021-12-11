@@ -5,7 +5,6 @@ importClass = Imports()
 
 
 class Day6:
-
     @staticmethod
     def task1():
         inp = importClass.getInput_split_by_comma("input/input6_test.txt")
@@ -21,7 +20,9 @@ class Day6:
                     new_fish_count[8] = fish_count.get(0, 0)
                     new_fish_count[6] = fish_count.get(0, 0)
                 elif i > 0:
-                    new_fish_count[i - 1] = new_fish_count.get(i-1, 0) + fish_count.get(i, 0)
+                    new_fish_count[i - 1] = new_fish_count.get(
+                        i - 1, 0
+                    ) + fish_count.get(i, 0)
 
             fish_count = new_fish_count
             no_of_days -= 1

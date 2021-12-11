@@ -15,7 +15,7 @@ class Day2:
                     "forward 2"
         """
         data = importClass.getInput("input/input2.txt")
-        #data = test_data.split("\n")
+        # data = test_data.split("\n")
         hor_pos = 0
         depth = 0
         aim = 0
@@ -26,15 +26,13 @@ class Day2:
             number = int(cmd_split[1])
             if direction == "forward":
                 hor_pos += number
-                depth += aim*number
+                depth += aim * number
             elif direction == "up":
                 aim -= number
             elif direction == "down":
                 aim += number
 
-        print("Task1:" + str(depth*hor_pos))
-
-
+        print("Task1:" + str(depth * hor_pos))
 
     @staticmethod
     def task2():

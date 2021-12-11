@@ -7,6 +7,9 @@ from Day6 import Day6
 from Day7 import Day7
 from Day8 import Day8
 from Day9 import Day9
+from Day10 import Day10
+from Day11 import Day11
+
 """
 print("Day 1:")
 Day1.task_1()
@@ -32,8 +35,11 @@ print("Day7: ")
 Day7.task2()
 
 #print(Day7.geom_sum(5, 16))
-"""
+
 low_points = Day9.task1()
 Day9.task2(low_points)
 
-
+inp = Day10.task1()
+Day10.task2(inp)
+"""
+Day11.task1()

@@ -4,13 +4,12 @@ importClass = Imports()
 
 
 class Day1:
-
     @staticmethod
     def task_1():
         data = importClass.getInput("input/input_1.txt")
         counter = 0
         for i in range(1, len(data)):
-            previous = int(data[i-1])
+            previous = int(data[i - 1])
             current = int(data[i])
             if current > previous:
                 counter += 1

@@ -3,31 +3,30 @@ from input import Imports
 
 importClass = Imports()
 
+
 class Day5:
-
-
     @staticmethod
     def task1():
         inp = importClass.getInput("input/input5_test.txt")
-        #inp = importClass.getInput("input/input5.txt")
+        # inp = importClass.getInput("input/input5.txt")
 
-        data = list(map(lambda item: str(item).strip('\n').split('->'), inp))
+        data = list(map(lambda item: str(item).strip("\n").split("->"), inp))
         for item in data:
-            item[0] = item[0].split(',')
-            item[1] = item[1].split(',')
+            item[0] = item[0].split(",")
+            item[1] = item[1].split(",")
 
         points = []
         points_diag = []
 
         for item in data:
-            #(x1, y1) -> (x2,y2)
+            # (x1, y1) -> (x2,y2)
             x1 = int(item[0][0])
             x2 = int(item[1][0])
             y1 = int(item[0][1])
             y2 = int(item[1][1])
             if x1 == x2:
                 new_points = []
-                for y in range(min(y1,y2), max(y1,y2) + 1):
+                for y in range(min(y1, y2), max(y1, y2) + 1):
                     new_point = f"({x1},{y})"
                     new_points.append(new_point)
                 points.extend(new_points)
