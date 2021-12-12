@@ -9,6 +9,7 @@ from Day8 import Day8
 from Day9 import Day9
 from Day10 import Day10
 from Day11 import Day11
+from Day12 import Day12
 
 """
 print("Day 1:")
@@ -41,5 +42,8 @@ Day9.task2(low_points)
 
 inp = Day10.task1()
 Day10.task2(inp)
-"""
+
 Day11.task1()
+"""
+
+Day12.task1()
