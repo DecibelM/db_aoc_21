@@ -10,6 +10,8 @@ from Day9 import Day9
 from Day10 import Day10
 from Day11 import Day11
 from Day12 import Day12
+from Day13 import Day13
+from Day14 import Day14
 
 """
 print("Day 1:")
@@ -44,6 +46,10 @@ inp = Day10.task1()
 Day10.task2(inp)
 
 Day11.task1()
-"""
 
 Day12.task1()
+"""
+
+# Day13.task1()
+
+Day14.task1()
